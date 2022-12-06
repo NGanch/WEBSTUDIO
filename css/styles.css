@@ -593,11 +593,8 @@ color: var(--primary-text-color);
 
 /*------------ portfolio page -----------*/
 
-
  /*-------------- filter -------------- */
-/* .filter-section {
-border: 1px solid red;
-} */
+
 
 .filter-section .title {
     display: none;
@@ -620,13 +617,27 @@ border: 1px solid red;
     border-radius: 4px;
     cursor: pointer;
 }
-.filter-list .btn:hover {
-    border: 1px solid rgba(0, 0, 0, 0);
-    background-clip: border-box;
+.filter-list .btn:hover,
+.filter-list .btn:focus {
+    color: var(--primary-white-color);
+    background-color: var(--primary-brand); 
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),    0px 2px 2px rgba(0, 0, 0, 0.12); 
+    border: 1px solid transparent; 
+    border-radius: 4px;
 }
+/* .filter-list .btn:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.12);
+
+.filter-list .btn:focus {
+    transform: translate(0, 2px);
+    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.12);
+    transition: 0.2s;
+  } */
 .btn-1{
     color: var(--primary-white-color); 
     background-color: var(--primary-brand);
+    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.12);
 }
 .btn-2,
 .btn-3,
@@ -635,7 +646,6 @@ border: 1px solid red;
     color: var(--primary-brand);
     background-color: var(--accent-color);
 }
-
  /*-------------- filter -------------- */
 
 
@@ -672,8 +682,6 @@ border: 1px solid red;
     vertical-align: top;
     color: var(--dark-text-color);
 }
-
-
 .project-card .text {
     font-family: var(--first-font-family);
     font-size: 16px;
@@ -683,7 +691,6 @@ border: 1px solid red;
     text-align: left;  
     color: var(--primary-text-color);
 }
-
 
 /*------------ Galerry ----------------*/
 
