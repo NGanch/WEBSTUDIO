@@ -43,7 +43,7 @@ html {
     /* width: 1440px; */
 }
  body {
-    background-color: var( --secondary-bg-color);
+    background-color: var(--primary-white-color);
     color: var(--primary-text-color);
     font-family: var(--first-font-family);
 } 
