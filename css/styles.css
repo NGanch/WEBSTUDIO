@@ -119,7 +119,7 @@ html {
     /* margin-right: 40px; */
     font-family: var(--first-font-family);
     color: var(--dark-text-color);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -580,8 +580,7 @@ margin-bottom: 0;
 border: 1px solid red;
 } */
 
-.filter-section .title,
-.project-section .title {
+.filter-section .title {
     display: none;
 }
 
@@ -603,7 +602,8 @@ border: 1px solid red;
     cursor: pointer;
 }
 .filter-list .btn:hover {
-    border: 1px dashed rgb(59, 22, 54);
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-clip: border-box;
 }
 .btn-1{
     color: var(--primary-white-color); 
@@ -622,9 +622,7 @@ border: 1px solid red;
 
 
 /*------------ Galerry ----------------*/
-/* .project-section {
-    border: 1px solid red;
-} */
+
 .row {
     list-style: none;
 }
