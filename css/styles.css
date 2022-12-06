@@ -43,10 +43,11 @@ html {
     /* width: 1440px; */
 }
  body {
-    background-color: var(--primary-white-color);
+    background-color: var( --primary-white-color);
     color: var(--primary-text-color);
     font-family: var(--first-font-family);
 } 
+
 .header {
     background-color: var(--color-background);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -61,8 +62,7 @@ html {
 
 
     /* --------------Навигація на інші сторінки --------------*/
-
-  /* ------------logo----------------*/
+   /* РљРѕРЅС‚РµР№РЅРµСЂ */
 .container { 
     width: 1128px;
     height: 72px;
@@ -72,6 +72,9 @@ html {
     margin-right: auto;
     /* border: 2px solid tomato; */
 }
+
+  
+/* ------------logo----------------*/
 
 .logo {
     /* margin-left: 156px; */
@@ -98,6 +101,7 @@ html {
 .nav {
     display: flex;
     align-items: center;
+    /* justify-content: space-between; */
 }
 
 .site-nav, 
@@ -109,6 +113,8 @@ html {
 
 .site-nav {
     display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
     margin-left: 77px;
 }
 
@@ -137,6 +143,12 @@ html {
 color: var(--primary-text-color);
 }
 
+/* .site-nav .link:last-child{
+    margin-right: 0;
+} */
+/* .site-nav .link:not(:last-child){
+    margin-right: 0;
+} */
 .site-nav .items + .items{
     margin-left: 40px;
 } 
@@ -152,13 +164,17 @@ color: var(--primary-text-color);
     align-items: center;
 }
 .auth-list .item {
+
     /* border: 2px solid tomato; */
 }
-
 .auth-list .item + .item {
     margin-right: 0;
     margin-left: 40px;
+
 }
+/* .auth-list .item:last-child {
+    margin-right: 156px;
+} */
 
 .contacts {
     margin-top: 24px;
@@ -393,15 +409,15 @@ color: var(--primary-text-color);
 .section-work .list{
     height: 311px;
     display: flex;
-list-style: none;
+    list-style: none;
 }
 
 .section-work .item +.item{
     margin-left: 24px;
 }
 .section-work .item{
-margin-top: 0;
-margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .section-work .picture{
     height: 300px;
@@ -506,7 +522,6 @@ margin-bottom: 0;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    letter-spacing: 2%;
     text-align: center;
     vertical-align: top;
     border-radius: nullpx;
@@ -519,8 +534,9 @@ margin-bottom: 0;
  .footer{
     margin:0;
     padding: 0;
+   
+   
  }
-
  .container-6{
     /* margin-top: -100px; */
     width: 1440px;
@@ -535,6 +551,8 @@ margin-bottom: 0;
     /* height: 110px;
     width: 264px; */
  }
+
+
 
  .container-6 .logo {
     margin-bottom: 16px;
@@ -574,6 +592,7 @@ margin-bottom: 0;
 }
 
 /*------------ portfolio page -----------*/
+
 
  /*-------------- filter -------------- */
 /* .filter-section {
@@ -626,7 +645,7 @@ border: 1px solid red;
 .row {
     list-style: none;
 }
-.row .desc {
+/* .project-card .desc {
     font-family: var(--first-font-family);
     color: var(--light-color);
     font-size: 16px;
@@ -635,38 +654,36 @@ border: 1px solid red;
     letter-spacing: 0.02em;
     text-align: left;
     vertical-align: top;
-  
-}
+} */
 
-.row .image {
+.project-card .image {
     height: 300px;
     width: 360px;
     border-radius: 0px;
 }
 
-.row .title {
+.project-card .subtitle {
     font-family: var(--first-font-family);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    letter-spacing: 2%;
     text-align: left;
     vertical-align: top;
     color: var(--dark-text-color);
 }
 
-.row .text {
+
+.project-card .text {
     font-family: var(--first-font-family);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: left;  
-    line-height: 128%;
-    letter-spacing: 2%;
     color: var(--primary-text-color);
 }
 
 
 /*------------ Galerry ----------------*/
+
