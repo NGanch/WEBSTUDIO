@@ -582,6 +582,9 @@ color: var(--primary-text-color);
 .row .project-card:nth-last-child(-n + 3){
     margin-bottom: 0;
 }
+.project-card .link {
+    text-decoration: none;
+}
 /* .project-card .desc {
     font-family: var(--first-font-family);
     color: var(--light-color);
