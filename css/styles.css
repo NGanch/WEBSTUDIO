@@ -485,7 +485,7 @@ color: var(--primary-text-color);
 
 .team-soc-link:hover,
 .team-soc-link:focus {
-    background-color: var(--button-hover);
+    background-color: #31D0AA;
 }
 /* ---------------section-team-icon----------------*/
 
@@ -641,7 +641,7 @@ color: var(--primary-text-color);
 
 .footer-soc-link:hover,
 .footer-soc-link:focus {
-    background-color: var(--button-hover);
+    background-color: #31D0AA;
 }
 
 
