@@ -78,7 +78,7 @@ img {
     /* --------------Навигація на інші сторінки --------------*/
    /* container */
 
-   .container { 
+.container { 
     width: 1158px;
     margin: 0 auto;
     padding-left: 15px;
@@ -148,6 +148,7 @@ img {
 .site-nav .link:hover{
     color: var(--primary-brand);
 }
+
 .site-nav .link:active {
 color: var(--primary-text-color);
 }
@@ -170,7 +171,6 @@ color: var(--primary-text-color);
 .auth-list .item + .item {
     margin-right: 0;
     margin-left: 40px;
-
 }
 
 .contacts {
@@ -184,9 +184,11 @@ color: var(--primary-text-color);
     text-align: left; 
     vertical-align: top;
 }
+
 .contacts:hover {
     color: var(--primary-brand);
 }
+
 /* ------------auth-list----------------*/
 
     /* --------------Навигація на інші сторінки --------------*/
@@ -203,9 +205,9 @@ color: var(--primary-text-color);
     max-width:1600px;
     background-image: 
     linear-gradient(
-        to right,
-        rgba(46, 47, 66, 1), 
-    rgba(6, 10, 8, 0)
+       
+        rgba(46, 47, 66, 0.7),
+         rgba(46, 47, 66, 0.7) 
     ),
     url("../images/hero-img.jpg");
     background-repeat: no-repeat;
@@ -245,7 +247,6 @@ color: var(--primary-text-color);
     vertical-align: center;
     color: var( --primary-white-color);
     cursor: pointer;
- 
 }
 
 .section-hero .btn:hover,
@@ -477,16 +478,17 @@ color: var(--primary-text-color);
     border-radius: 50%;
     background-color: var(--primary-brand);
     background-position: center;
-
 }
+
 .team-soc-icon {
  fill: var(--light-color);
 }
 
 .team-soc-link:hover,
 .team-soc-link:focus {
-    background-color: #31D0AA;
+    background-color: var(--button-hover);
 }
+
 /* ---------------section-team-icon----------------*/
 
 
@@ -530,16 +532,18 @@ color: var(--primary-text-color);
     fill: var(--subtle-text-color);
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;  
 }
+
 .section-customers .link:hover .customers-icon,
 .section-customers .link:focus .customers-icon {
     fill: var(--primary-brand);
 }
 
-
-
+.section-customers .item:hover,
+.section-customers .item:focus {
+    outline: 1px solid var(--primary-brand);
+}
 
 
 /* ---------------section-customers----------------*/
@@ -641,7 +645,7 @@ color: var(--primary-text-color);
 
 .footer-soc-link:hover,
 .footer-soc-link:focus {
-    background-color: #31D0AA;
+    background-color: var(--button-hover);
 }
 
 
@@ -686,6 +690,7 @@ color: var(--primary-text-color);
     border-radius: 4px;
     cursor: pointer;
 }
+
 .filter-list .btn:hover,
 .filter-list .btn:focus {
     color: var(--primary-white-color);
@@ -755,6 +760,12 @@ color: var(--primary-text-color);
 
 }
 
+.project-card:hover,
+.project-card:focus{
+    border-radius: 6px;
+    box-shadow: 0px 5px 3px rgba(46, 47, 66, 0.08), 0px 3px 3px rgba(46, 47, 66, 0.16),
+    0px 3px 9px rgba(46, 47, 66, 0.08); 
+}
 .row .project-card:nth-child(3n){
     margin-right: 0;
 }
