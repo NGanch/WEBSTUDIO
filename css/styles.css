@@ -36,16 +36,6 @@
     margin: 0;
     padding: 0;
 }
-/* 
-@viewport {
-    width: device-width;
-    zoom: 1.0;
-} */
-
-/* html { 
-    box-sizing: border-box;
-  
-} */
 
  body {
     background-color: var( --primary-white-color);
@@ -78,7 +68,7 @@ img {
     /* --------------Навигація на інші сторінки --------------*/
    /* container */
 
-.container { 
+   .container { 
     width: 1158px;
     margin: 0 auto;
     padding-left: 15px;
@@ -153,7 +143,7 @@ img {
 color: var(--primary-text-color);
 }
 
-.site-nav .items + .items{
+.site-nav .item + .item{
     margin-left: 40px;
 } 
 
@@ -171,6 +161,7 @@ color: var(--primary-text-color);
 .auth-list .item + .item {
     margin-right: 0;
     margin-left: 40px;
+
 }
 
 .contacts {
@@ -200,6 +191,7 @@ color: var(--primary-text-color);
 /* ------------services----------------*/
 
 .section-hero {
+    margin: 0 auto;
     padding: 192px 0;
     background-color: var(--dark-text-color);
     max-width:1600px;
@@ -269,6 +261,7 @@ color: var(--primary-text-color);
 
 .feature-section{
     border-radius: 0px; 
+    margin: 0 auto;
 }
 
 .feature-section .title{
@@ -302,6 +295,7 @@ color: var(--primary-text-color);
     margin-bottom: 8px;
     background-color: var(--light-color);
 }
+
 
 /*-------- icons-group --------*/
 
@@ -338,6 +332,7 @@ color: var(--primary-text-color);
  /* ---------------section-work----------------*/
 
 .section-work {
+    margin: 0 auto;
     padding-top: 0;
     color: var(--dark-text-color);
     text-align: center;
@@ -383,6 +378,7 @@ color: var(--primary-text-color);
 
   /* ---------------section-team----------------*/
 .section-team{
+    margin: 0 auto;
     background-color: var(--light-color);
     text-align: center;
 }
@@ -478,8 +474,8 @@ color: var(--primary-text-color);
     border-radius: 50%;
     background-color: var(--primary-brand);
     background-position: center;
-}
 
+}
 .team-soc-icon {
  fill: var(--light-color);
 }
@@ -488,11 +484,13 @@ color: var(--primary-text-color);
 .team-soc-link:focus {
     background-color: var(--button-hover);
 }
-
 /* ---------------section-team-icon----------------*/
 
 
 /* ---------------section-customers----------------*/
+.section-customers {
+    margin: 0 auto;
+} 
 
 
 .section-customers .title {
@@ -514,25 +512,35 @@ color: var(--primary-text-color);
     display: flex; 
 }
 
-.section-customers .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
+ .section-customers .item {
     width: 168px;
     height: 88px;
-    outline: 1px solid #8E8F99;
     content: "";
-}
+} 
+
 .section-customers .item + .item {
     margin-left: 24px;
 }
-
-.section-customers .customers-icon {
-    fill: var(--subtle-text-color);
+.section-customers .link{
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    width:100%;
+    height:100%;
+    fill: #8E8F99;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+}
+
+.customers-icon {
+    fill: #8E8F99;
+}
+
+.section-customers .item:hover,
+.section-customers .item:focus {
+    border: 1px solid var(--primary-brand);
+    fill: var(--primary-brand);
+    border-radius: 4px; 
 }
 
 .section-customers .link:hover .customers-icon,
@@ -540,14 +548,7 @@ color: var(--primary-text-color);
     fill: var(--primary-brand);
 }
 
-.section-customers .item:hover,
-.section-customers .item:focus {
-    outline: 1px solid var(--primary-brand);
-}
-
-
 /* ---------------section-customers----------------*/
-
  /* ---------------footer----------------*/
  .footer{
     padding-top: 100px;
@@ -602,6 +603,7 @@ color: var(--primary-text-color);
 }
 
 /*------- footer-soc-list ------*/
+
 .social-media {
     height: 80px;
 }
@@ -656,6 +658,7 @@ color: var(--primary-text-color);
 
  /*-------------- filter -------------- */
 .filter-section {
+    margin: 0 auto;
     padding-top: 96px;
     padding-bottom: 120px;
 }
@@ -690,7 +693,6 @@ color: var(--primary-text-color);
     border-radius: 4px;
     cursor: pointer;
 }
-
 .filter-list .btn:hover,
 .filter-list .btn:focus {
     color: var(--primary-white-color);
