@@ -21,29 +21,35 @@
     
     <!-- Шапка сторінки -->
     <header class = "page-header">
-       
+            
         <!-- Навигація на інші сторінки -->
-        <div class="container flex-container">
-        <nav class = "nav">
-        <a href="./index.html" class = "logo"><span class = "logo-icon">WEB</span>STUDIO</a>
-      
-     
-        <ul class = "site-nav">
-            <li class = "item"><a href="./index.html" class = "link">Studio</a></li>
-            <li class = "item"><a href="./portfolio.html" class = "link">Portfolio</a></li>
-            <li class = "item"><a href="./index.html" class = "link">Contacts</a></li>
-            </ul>
-        </nav>
-            <ul class = "auth-list">
-                <!-- Посилання на телефонний номер -->              
-              <li class = "item"><a href="tel:+11(000)1111111" class = "contacts">+11 (000) 111-11-11</a></li>
-              
-              <!-- Посилання на адресу електронної пошти  -->
-              <li class = "item"><a href="mailto:example@mail.ua" class = "contacts">info@devstudio.com</a></li>
-              </ul>
-          </div>
-      
-    </header>
+            <div class="container flex-container">
+    
+                <nav class = "header-nav">
+                    <a href="./index.html" class = "logo"><span class = "logo-icon">WEB</span>STUDIO</a>
+          
+                    <ul class = "header-list">
+                         <li class = "header-item">
+                            <a href="./index.html" class = "header-nav-link active btn">Studio</a>
+                        </li>
+                         <li class = "header-item">
+                            <a href="./portfolio.html" class = "header-nav-link active btn">Portfolio</a>
+                        </li>
+                        <li class = "header-item">
+                            <a href="./index.html" class = "header-nav-link active btn">Contacts</a>
+                        </li>
+                    </ul>
+    
+                </nav>
+                <ul class = "auth-list">
+                    <!-- Посилання на телефонний номер -->              
+                     <li class = "auth-item"><a href="tel:+11(000)1111111" class = "header-contacts active btn">+11 (000) 111-11-11</a></li>
+                  
+                  <!-- Посилання на адресу електронної пошти  -->
+                    <li class = "auth-item"><a href="mailto:example@mail.ua" class = "header-contacts active btn">info@devstudio.com</a></li>
+                 </ul>
+            </div>
+         </header>
      <!-- Шапка сторінки -->
 
         <!-- Унікальний контент сторінки -->
@@ -54,46 +60,74 @@
                 <h1 class = "title">Navigation</h1>
                 <ul class = "filter-list">
                     <li class = "item">
-                        <button class="btn btn-1" type="button">All</button>
+                        <button class="button btn-1 btn" type="button">All</button>
                     </li>
                     <li class = "item">
-                        <button class="btn btn-2" type="button">Web Site</button>
+                        <button class="button btn-2 btn" type="button">Web Site</button>
                     </li>
                     <li class = "item">
-                        <button class="btn btn-3" type="button">App</button>
+                        <button class="button btn-3 btn" type="button">App</button>
                     </li>
                     <li class = "item">
-                        <button  class="btn btn-4" type="button">Design</button>
+                        <button  class="button btn-4 btn" type="button">Design</button>
                     </li>
                     <li class = "item">
-                        <button class="btn btn-5" type="button">Marketing</button>
+                        <button class="button btn-5 btn" type="button">Marketing</button>
                     </li>
                 </ul>
            
              <!-- filter -->
 
              <!-- Galerry-->
-                <ul class = "row">
-                    <li class = "project-card">
+                <ul class = "menu">
+                    <li class = "project-card btn">
                         <a href="./index.html" class = "link">
-                        <!-- <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p> -->
+                         
+                        <!-- box-menu -->
+                        <div class="box">
+                            <div class="overlay">
+                                <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>  
+                            </div>  
                         <img class = "image" src = "./images/img-4.jpg" alt = "A photo of a man" width = "360"/>
+                        </div>
+                         <!-- box-menu -->
+
                         <h3 class = "subtitle">Banking App Interface Concept</h3>
                         <p class = "text">App</p>
                         </a>
                     </li>
-                    <li class = "project-card">
+
+                    <!-- project-card -->
+                    <li class = "project-card btn">
                         <a href="./index.html" class = "link">
-                        <!-- <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p> -->
-                        <img class = "image img" src = "./images/img-5.jpg" alt = "A photo of a man" width = "360"/>
+
+                         <!-- box-menu -->
+                        <div class="box">
+                            <div class="overlay">
+                                <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>  
+                            </div>
+                            <img class = "image img" src = "./images/img-5.jpg" alt = "A photo of a man" width = "360"/>
+                        </div>
+                        <!-- box-menu -->
+
                         <h3 class = "subtitle">Cashless Payment</h3>
                         <p class = "text">Marketing</p>
                         </a>
                     </li>
-                    <li class = "project-card">
+              
+                    <!-- project-card -->
+                    <li class = "project-card btn">
                         <a href="./index.html" class = "link">
-                        <!-- <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p> -->
-                        <img class = "image" src = "./images/img-6.jpg" alt = "A photo of a man" width = "360"/>
+                        
+                         <!-- box-menu -->
+                        <div class="box">
+                            <div class="overlay">
+                                <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>  
+                            </div>
+                            <img class = "image" src = "./images/img-6.jpg" alt = "A photo of a man" width = "360"/>
+                        </div>
+                         <!-- box-menu -->
+
                         <h3 class = "subtitle">Meditaion App</h3>
                         <p class = "text">App</p>
                         </a>
@@ -101,53 +135,99 @@
                
                 <!-- row-2 -->
                
-                    <li class = "project-card"> 
+                    <li class = "project-card btn"> 
                         <a href="./index.html" class = "link">
-                        <!-- <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p> -->
+                        
+                        <!-- box-menu -->
+                        <div class="box">
+                            <div class="overlay">
+                                <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>  
+                            </div>
                         <img class = "image" src = "./images/img-7.jpg" alt = "A photo of a man" width = "360"/>
+                        </div>
+                         <!-- box-menu -->
+
                         <h3 class = "subtitle">Taxi Service</h3>
                         <p class = "text">Marketing</p>
                         </a>
                     </li>
-                    <li class = "project-card">  
-                        <a href="./index.html" class = "link"> 
-                        <!-- <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p> -->
+                    <li class = "project-card btn">  
+                        <a href="./index.html" class = "link">
+                        <!-- box-menu -->
+                        <div class="box">
+                            <div class="overlay">
+                                <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>  
+                            </div> 
                         <img class = "image" src = "./images/img-8.jpg" alt = "A photo of a man" width = "360"/>
+                        </div>
+                        <!-- box-menu -->
+
                         <h3 class = "subtitle">Screen Illustrations</h3>
                         <p class = "text">Design</p>
                         </a>
                     </li>
-                    <li class = "project-card">
+                    <li class = "project-card btn">
                         <a href="./index.html" class = "link">
-                        <!-- <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p> -->
-                        <img class = "image" src = "./images/img-9.jpg" alt = "A photo of a man" width = "360"/>
-                        <h3 class = "subtitle">Online Courses</h3>
+
+                        <!-- box-menu -->
+                        <div class="box">
+                            <div class="overlay">
+                                <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>  
+                            </div>
+                            <img class = "image" src = "./images/img-9.jpg" alt = "A photo of a man" width = "360"/>
+                        </div>
+                        <!-- box-menu -->
+
+                            <h3 class = "subtitle">Online Courses</h3>
                         <p class = "text">Marketing</p>
                         </a>
                     </li>
                 
                 <!-- row-3 -->
                 
-                    <li class = "project-card">    
+                    <li class = "project-card btn">    
                         <a href="./index.html" class = "link">
-                        <!-- <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p> -->
+                        
+                            <!-- box-menu -->
+                        <div class="box">
+                            <div class="overlay">
+                                <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>  
+                            </div>
                         <img class = "image" src = "./images/img-10.jpg" alt = "A photo of a man" width = "360"/>
+                        </div>
+                         <!-- box-menu -->
+
                         <h3 class = "subtitle">Instagram Stories Concept</h3>
                         <p class = "text">Design</p>
                         </a>
                     </li>
-                    <li class = "project-card">  
+                    <li class = "project-card btn">  
                         <a href="./index.html" class = "link">
-                        <!-- <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p> -->
+                        
+                        <!-- box-menu -->
+                        <div class="box">
+                            <div class="overlay">
+                                <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>  
+                            </div>
                         <img class = "image" src = "./images/img-11.jpg" alt = "A photo of a man" width = "360"/>
+                        </div>
+                        <!-- box-menu -->
+
                         <h3 class = "subtitle">Organic Food</h3>
                         <p class = "text">Web Site</p>
                         </a>
                     </li>
-                    <li class = "project-card">   
-                        <a href="./index.html" class = "link">       
-                        <!-- <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p> -->
+                    <li class = "project-card btn">   
+                        <a href="./index.html" class = "link"> 
+                            
+                        <!-- box-menu -->
+                        <div class="box">
+                            <div class="overlay">
+                                <p class = "desc">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>  
+                            </div>
                         <img class = "image" src = "./images/img-12.jpg" alt = "A photo of a man" width = "360"/>
+                        </div>
+                        <!-- box-menu -->
                         <h3 class = "subtitle">Meditaion App</h3>
                         <p class = "text">Web Site</p> 
                         </a>   
@@ -155,11 +235,12 @@
                 </ul>
                 </div>
             </section>
+             <!-- filter -->
         </main>
 
         <!-------------- Футер ------------------>
         <footer class = "footer">
-            <div class="container flex-containers">
+            <div class="container flex-container">
             <div class=" social social-info">
                 
             <a href="./index.html" class="logo"><span class = "logo-icon">WEB</span>STUDIO</a>
@@ -172,28 +253,28 @@
             <ul class ="footer-soc-list">
                 <li class = "footer-soc-item">
                     <a class="footer-soc-link">
-                        <svg class = "footer-soc-icon" width="24px" height="24px">
+                        <svg class = "footer-soc-icon btn" width="24px" height="24px">
                             <use href="./images/symbol-defs.svg#icon-instagram"></use>
                         </svg>
                     </a>
                 </li>
                 <li class = "footer-soc-item">
                     <a class="footer-soc-link">
-                        <svg class = "footer-soc-icon" width="24px" height="24px">
+                        <svg class = "footer-soc-icon btn" width="24px" height="24px">
                             <use href="./images/symbol-defs.svg#icon-twitter"></use>
                         </svg>
                     </a>
                 </li>
                 <li class = "footer-soc-item">
                     <a class="footer-soc-link">
-                        <svg class = "footer-soc-icon" width="24px" height="24px">
+                        <svg class = "footer-soc-icon btn" width="24px" height="24px">
                             <use href="./images/symbol-defs.svg#icon-facebook"></use>
                         </svg>
                     </a>
                 </li>
                 <li class = "footer-soc-item">
                     <a class="footer-soc-link">
-                        <svg class = "footer-soc-icon" width="24px" height="24px">
+                        <svg class = "footer-soc-icon btn" width="24px" height="24px">
                             <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                         </svg>
                     </a>
@@ -201,9 +282,11 @@
             </ul>
             </div>
           </div>
-
+    
         
         </footer>
 
+</body>
+</html>
 </body>
 </html>
