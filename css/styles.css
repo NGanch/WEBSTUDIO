@@ -35,6 +35,8 @@
     /* анімація час */
         --anim-slow: 300ms ease-out;
         --anim-fast: 250ms ease; 
+        --transition-duration-and-fun: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -45,7 +47,7 @@
     padding: 0;
 }
 
- body {
+body {
     background-color: var( --primary-white-color);
     color: var(--primary-text-color);
     font-family: var(--first-font-family);
@@ -87,23 +89,12 @@ img {
     display: flex;
   
 }
-
+/* transition */
 .btn {
-    transition: color var(--anim-fast);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-transit {
-    transition: color var(--anim-fast);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
-    0px 2px 1px rgba(0, 0, 0, 0.08),  
-    0px 2px 2px rgba(0, 0, 0, 0.12); 
-    transition: box-shadow 0.3s ease-in-out;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+    transition: background-color var( --transition-duration-and-fun);
+    transition-delay: 250ms;
+} 
+/* transition */
 /* ------------------- site-nav ------------------- */
 .header-nav {
     display: flex;
@@ -175,14 +166,14 @@ img {
     margin-left: 40px;
 } 
 
-.header-nav-link.active {
+.header-nav-link.current {
     position: relative;
     color: var(--primary-text-color);
+    transition: color var(--transition-duration-and-fun);
+    transition-delay: 250ms;
 }
 
-/* ----------- hover --------------- */
-
-.header-nav-link.active:hover::before {
+.header-nav-link.current::before {
     position: absolute;
     content: '';
     display: block;
@@ -192,6 +183,13 @@ img {
     background-color: var(--primary-hover);
     height: 4px;
     border-radius: 2px;
+} 
+
+/* ----------- hover --------------- */
+
+.header-btn {
+    transition: color var( --transition-duration-and-fun);
+    transition-delay: 250ms;
 }
 
 .header-nav-link:hover,
@@ -211,20 +209,22 @@ img {
     align-items: center;
 }
 
-.auth-item{
-    transition: var(--anim-fast);
 
-}
 
 .auth-list .auth-item + .auth-item {
     margin-right: 0;
     margin-left: 40px;
+
 }
+/* .auth-list .item:last-child {
+    margin-right: 156px;
+} */
 
 .header-contacts {
     color: var(--primary-text-color);
     font-size: 16px;
     font-weight: 400;
+
 }
 
 /* ------------------- auth-list ------------------ */
@@ -249,7 +249,7 @@ img {
          rgba(46, 47, 66, 0.7) 
     ),
     url("../images/hero-img.jpg");
-
+   
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -287,6 +287,9 @@ img {
     vertical-align: center;
     color: var( --primary-white-color);
     cursor: pointer;
+    transition: opacity var( --transition-duration-and-fun);
+    transition: background-color var( --transition-duration-and-fun);
+    transition-delay: 250ms;
 }
 
 /* ----------- hover --------------- */
@@ -298,6 +301,8 @@ img {
 .section-hero .button:active {
     color: var(--primary-brand);
 }
+
+
 /* ----------- hover --------------- */
 
 /* ------------------- services ------------------- */
@@ -348,7 +353,9 @@ img {
 
 
 
+
 /* ---------- icons-group ---------- */
+
 
 .feature-list .subtitle {
     margin-top: 0;
@@ -382,6 +389,7 @@ img {
 
 
 /* ----------------- section-work ----------------- */     
+
 .section-work {
     margin: 0 auto;
     padding-top: 0;
@@ -423,6 +431,7 @@ img {
     background-color: var(--accent-color);
     border-radius: 0px;
 }
+
 /* ----------------- section-work ----------------- */
 
 
@@ -496,11 +505,15 @@ img {
     vertical-align: top;
     border-radius: nullpx;
 }
+
+
 /* ----------------- section-team ------------------*/
 
 
 
+
 /* --------------- section-team-icon ---------------*/
+
 .team-soc-list {
     margin: 0;
     padding: 0;
@@ -567,7 +580,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: color var(--anim-fast);
     border-radius: 4px;
     width: 168px;
     height: 88px;
@@ -596,10 +608,16 @@ img {
 }
 
 /* ----------- hover --------------- */
-.section-customers .item:hover,
-.section-customers .item:focus {
+.custum-btn {
+    transition: fill var(--transition-duration-and-fun);
+    transition:  border var(--transition-duration-and-fun);
+    transition-delay: 250ms;
+} 
+
+.section-customers .link:hover,
+.section-customers .link:focus {
     border: 1px solid var( --primary-hover);
-    /* fill: var( --primary-hover); */
+    fill: var( --primary-hover);
     border-radius: 4px;    
 }
 
@@ -703,10 +721,11 @@ img {
     border: none;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    background-position: center; 
+   background-position: center; 
 }
 
-/* ----------- hover --------------- */
+/* ----------- hover --------------- */ 
+
 .footer-soc-link:hover,
 .footer-soc-link:focus {
     background-color: var(--button-hover);
@@ -718,6 +737,7 @@ img {
 
 
 /* -------------------- filter -------------------- */
+
 .filter-section {
     margin: 0 auto;
     padding-top: 96px;
@@ -756,7 +776,19 @@ img {
 }
 
 
+
 /* ----------- hover --------------- */
+
+
+.btn-transit {
+    transition: border var( --transition-duration-and-fun);
+    transition: color var( --transition-duration-and-fun);
+    transition: background-color var( --transition-duration-and-fun);
+    transition: box-shadow var(--transition-duration-and-fun);
+    transition-delay: 250ms;
+
+}
+
 .filter-list .button:hover,
 .filter-list .button:focus {
     color: var(--primary-white-color);
@@ -766,11 +798,11 @@ img {
     border-radius: 4px;
 
 }
+
 /* ----------- hover --------------- */
 .btn-1{
     color: var(--primary-white-color); 
     background-color: var(--primary-brand);
-    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.12);
     width: 69px;
     height: 48px; 
 }
@@ -807,6 +839,7 @@ img {
 
 
 /* -------------------- Galerry ------------------- */   
+
 .menu {
     margin: 0;
     padding: 0;
@@ -817,15 +850,16 @@ img {
 
 .project-card {
     cursor: pointer;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 1px 6px rgba(46, 47, 66, 0.08); 
     flex-direction: column;
     height: 420px;
     width: 360px;
     border-radius: 0px;
     margin-right: 24px;
     margin-bottom: 48px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+
 
 .menu .project-card:nth-child(3n){
     margin-right: 0;
@@ -841,15 +875,20 @@ img {
 
 
 /* ----------- hover --------------- */
+
+.project-transit {
+    transition: box-shadow var(--transition-duration-and-fun);
+    transition-duration: 250ms;
+}
+
 .project-card:hover,
 .project-card:focus{
-    transition: transform 250ms ease;
     border-radius: 6px;
-    box-shadow: 0px 5px 3px rgba(46, 47, 66, 0.08), 0px 3px 3px rgba(46, 47, 66, 0.16),
-    0px 3px 9px rgba(46, 47, 66, 0.08); 
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08); 
 } 
-/* ----------- hover --------------- */
 
+/* ----------- hover --------------- */
 
 
 /*---------- box-menu  -------------*/
@@ -859,8 +898,6 @@ img {
 
 .box {
     position: relative;
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     overflow: hidden;
 }
 
@@ -878,7 +915,8 @@ img {
     height: 100%;
     background-color: var(--primary-brand);
     transform: translate(0, 100%);
-    transition: transform 250ms ease;
+    transition: opacity var(--transition-duration-and-fun),
+    visibility var(--transition-duration-and-fun);
 
     width: 400px;
     padding: 40px 32px 280px 32px;
@@ -926,11 +964,12 @@ img {
     text-align: left;  
     color: var(--primary-text-color);
 }
+
 /* -------------------- Galerry ------------------- */
 
-
-
 /* --------------------- MODAL -------------------- */ 
+
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -985,7 +1024,6 @@ img {
     height: 24px;
     cursor: pointer;
 }
-
 .modal-icon {
     color: var(--icon-close-black);
 }
