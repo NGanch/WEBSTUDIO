@@ -71,7 +71,7 @@
             <div class="container">
 
                 <h1 class = "title" style="--shift: 2">Effective Solutions for Your Business</h1>
-                <p class = "hero-undertitle" style="--idx: 1; --shift: 3">Effective Solutions</p>
+
                 <button class = "button" id="mybutton" type="button" data-modal-open>Order Service</button>
             </div>
         </section>
@@ -406,17 +406,7 @@
             </ul>
 
         </div>
-        <div class="booking">
-            
-            <form class="booking-form" name="booking-form" autocomplete="off" role="search">
-                <label type="email" class="label">
-                    <span class="span-subscribe">Subscribe</span>
-                    <input type="email" type="user-email" placeholder ="E-mail"/>
-                </label>
-                <button class="sub-button" type="submit">Subscribe</button>
-            </form>
-
-        </div>
+       
         </div>
     </footer>
    
@@ -432,39 +422,7 @@
         <div class ="backdrop is-hidden" data-modal>
             <div class="modal">
               
-                    <p class="text">Leave your contacts and we will call you back</p>
-                    <form class="form js-speacer-form">
-                    <div class="form-field">
-                        <label for="name" >Name</label>
-                        <input 
-                        type="text"
-                         name="name"
-                          id="name" 
-                          autofocus/>
-                    </div>
-                    <div class="form-field">
-                        <label for="tel">Phone</label>
-                        <input type="tel" name="tel" id="tel"/>
-                    </div>
-                        <div class="form-field">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email"/>
-                    </div>
-                        <div class="form-field">
-                        <label for="comment">Comment</label>
-                        <textarea class="comment-form" name="comment" id="comment" rows="8" placeholder="Text input" ></textarea>
-                    </div>
-
-                
-                    <div role="group" class="form-field topic-option">
-                        <input type="checkbox" name="topic" value="policy" id="policy">
-                        <label for="policy" class="label-text-policy">I accept the terms and conditions of the Privacy Policy</label>
-                  
-                    </div>
                     
-                        <button class= "button-backdrop" type="submit">Send</button>
-
-                    </form>
 
                     <button class ="modal-btn" data-modal-close>
                         <svg class="modal-icon" width="8px" height="8px">
@@ -478,20 +436,7 @@
 
 <!-------------- MODAL ------------------>
 
-<!-- Do not let form send without JS -->
-<script>
-    (() => {
-        document
-        .querySelector('.js-speaker-form')
-        .addEventListener('submit', functione => {
-            e.preventDefault();
-            new FormDate(e.currentTarget).forEach((value, name) =>
-            console.log(`${name}: ${value}`),
-        );
-        });
-    })();
-</script>
-<!-- Do not let form send without JS -->
+
 
 <script src="./js/modal.js"></script>
 
