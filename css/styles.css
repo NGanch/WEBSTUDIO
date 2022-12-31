@@ -47,7 +47,7 @@
     padding: 0;
 }
 
-body {
+ body {
     background-color: var( --primary-white-color);
     color: var(--primary-text-color);
     font-family: var(--first-font-family);
@@ -91,8 +91,7 @@ img {
 }
 /* transition */
 .btn {
-    transition: background-color var( --transition-duration-and-fun);
-    transition-delay: 250ms;
+    transition: background-color var( --transition-duration-and-fun); 
 } 
 /* transition */
 /* ------------------- site-nav ------------------- */
@@ -168,12 +167,13 @@ img {
 
 .header-nav-link.current {
     position: relative;
+
     color: var(--primary-text-color);
     transition: color var(--transition-duration-and-fun);
-    transition-delay: 250ms;
+   
 }
 
-.header-nav-link.current::before {
+.header-nav-link.current:hover::before {
     position: absolute;
     content: '';
     display: block;
@@ -189,7 +189,6 @@ img {
 
 .header-btn {
     transition: color var( --transition-duration-and-fun);
-    transition-delay: 250ms;
 }
 
 .header-nav-link:hover,
@@ -209,16 +208,10 @@ img {
     align-items: center;
 }
 
-
-
 .auth-list .auth-item + .auth-item {
     margin-right: 0;
     margin-left: 40px;
-
 }
-/* .auth-list .item:last-child {
-    margin-right: 156px;
-} */
 
 .header-contacts {
     color: var(--primary-text-color);
@@ -287,9 +280,8 @@ img {
     vertical-align: center;
     color: var( --primary-white-color);
     cursor: pointer;
-    transition: opacity var( --transition-duration-and-fun);
-    transition: background-color var( --transition-duration-and-fun);
-    transition-delay: 250ms;
+    transition: opacity var( --transition-duration-and-fun),
+    background-color var( --transition-duration-and-fun);
 }
 
 /* ----------- hover --------------- */
@@ -301,6 +293,7 @@ img {
 .section-hero .button:active {
     color: var(--primary-brand);
 }
+
 
 
 /* ----------- hover --------------- */
@@ -388,6 +381,7 @@ img {
 
 
 
+
 /* ----------------- section-work ----------------- */     
 
 .section-work {
@@ -433,6 +427,7 @@ img {
 }
 
 /* ----------------- section-work ----------------- */
+
 
 
 
@@ -543,6 +538,8 @@ img {
  fill: var(--light-color);
 }
 /* ----------- hover --------------- */
+
+
 .team-soc-link:hover,
 .team-soc-link:focus {
     background-color: var(--primary-hover);
@@ -597,8 +594,8 @@ img {
     align-items: center;
     width: 104px;
     height: 56px;
-    /* width:100%; */
-    /* height:100%; */
+    width:100%; 
+    height:100%;
     fill: var(--subtle-text-color);
     border-radius: 4px;
 }
@@ -609,9 +606,9 @@ img {
 
 /* ----------- hover --------------- */
 .custum-btn {
-    transition: fill var(--transition-duration-and-fun);
-    transition:  border var(--transition-duration-and-fun);
-    transition-delay: 250ms;
+    transition: fill var(--transition-duration-and-fun),
+    border var(--transition-duration-and-fun);
+
 } 
 
 .section-customers .link:hover,
@@ -721,7 +718,7 @@ img {
     border: none;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-   background-position: center; 
+    background-position: center; 
 }
 
 /* ----------- hover --------------- */ 
@@ -732,7 +729,9 @@ img {
 }
 /* ----------- hover --------------- */
 
+
 /* -------------------- footer -------------------- */
+
 
 
 
@@ -781,12 +780,10 @@ img {
 
 
 .btn-transit {
-    transition: border var( --transition-duration-and-fun);
-    transition: color var( --transition-duration-and-fun);
-    transition: background-color var( --transition-duration-and-fun);
-    transition: box-shadow var(--transition-duration-and-fun);
-    transition-delay: 250ms;
-
+    transition: border var( --transition-duration-and-fun),
+    color var( --transition-duration-and-fun),
+    box-shadow var(--transition-duration-and-fun),
+    background-color var( --transition-duration-and-fun);
 }
 
 .filter-list .button:hover,
@@ -796,7 +793,6 @@ img {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
     border: 1px solid transparent; 
     border-radius: 4px;
-
 }
 
 /* ----------- hover --------------- */
@@ -840,6 +836,7 @@ img {
 
 /* -------------------- Galerry ------------------- */   
 
+
 .menu {
     margin: 0;
     padding: 0;
@@ -878,7 +875,6 @@ img {
 
 .project-transit {
     transition: box-shadow var(--transition-duration-and-fun);
-    transition-duration: 250ms;
 }
 
 .project-card:hover,
@@ -916,8 +912,8 @@ img {
     background-color: var(--primary-brand);
     transform: translate(0, 100%);
     transition: opacity var(--transition-duration-and-fun),
-    visibility var(--transition-duration-and-fun);
-
+    visibility var(--transition-duration-and-fun),
+    transform var(--anim-slow) 250ms;
     width: 400px;
     padding: 40px 32px 280px 32px;
     font-family: var(--first-font-family);
