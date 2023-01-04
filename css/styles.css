@@ -12,7 +12,7 @@
     /* hower2 */
         --button-hover: #31D0AA;
     /* білий колір тексту */
-        --primary-white-color:  #FFFFFF;
+        --primary-white-color: #FFFFFF;
     /* другий колір фону */
         --secondary-bg-color: #E5E5E5;
     /* третій колір фону */
@@ -21,6 +21,10 @@
         --subtle-text-color: #8E8F99;
     /* колір іконки хрестик */
         --icon-close-black: #000000;
+    /* текст лейбла */
+        --label-text-policy: #757575;
+    /* колір модельного вікна */
+        --modal-color:#FCFCFC;
 
     /* Font-family-first */
         --first-font-family: 'Roboto', sans-serif;
@@ -76,8 +80,7 @@ img {
 
 
     /* --------------Навигація на інші сторінки --------------*/
-   /* container */
-
+/* ---- Класи часто вживаються ---- */
 .container { 
     width: 1158px;
     margin: 0 auto;
@@ -89,11 +92,23 @@ img {
     display: flex;
   
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
 /* transition */
 .btn {
-    transition: background-color var( --transition-duration-and-fun); 
+    transition: background-color var( --transition-duration-and-fun);  
 } 
 /* transition */
+/* ---- Класи часто вживаються ---- */
 /* ------------------- site-nav ------------------- */
 .header-nav {
     display: flex;
@@ -167,13 +182,11 @@ img {
 
 .header-nav-link.current {
     position: relative;
-
-    color: var(--primary-text-color);
-    transition: color var(--transition-duration-and-fun);
-   
+    color: var(--primary-hover);  
 }
 
-.header-nav-link.current:hover::before {
+/* ----------- before --------------- */
+.header-nav-link.current::before{
     position: absolute;
     content: '';
     display: block;
@@ -184,21 +197,25 @@ img {
     height: 4px;
     border-radius: 2px;
 } 
+/* ----------- before --------------- */
 
-/* ----------- hover --------------- */
 
+/* ----------- hover-focus --------------- */
 .header-btn {
-    transition: color var( --transition-duration-and-fun);
+    transition: color var( --transition-duration-and-fun); 
 }
 
 .header-nav-link:hover,
-.header-contacts:hover{
+.header-nav-link:focus,
+.header-contacts:hover,
+.header-contacts:focus{
     color: var(--primary-hover);
 }
-/* ----------- hover --------------- */
+/* ----------- hover-focus --------------- */
 
 
 /* ------------------- site-nav ------------------- */
+
 
 /* ------------------- auth-list ------------------ */
 
@@ -217,7 +234,6 @@ img {
     color: var(--primary-text-color);
     font-size: 16px;
     font-weight: 400;
-
 }
 
 /* ------------------- auth-list ------------------ */
@@ -237,12 +253,10 @@ img {
     max-width:1600px;
     background-image: 
     linear-gradient(
-       
         rgba(46, 47, 66, 0.7),
          rgba(46, 47, 66, 0.7) 
     ),
     url("../images/hero-img.jpg");
-   
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -284,19 +298,19 @@ img {
     background-color var( --transition-duration-and-fun);
 }
 
-/* ----------- hover --------------- */
+/* ----------- hover-focus --------------- */
+
 .section-hero .button:hover,
 .section-hero .button:focus{
    background-color: var(--primary-hover);
    opacity: 10;
 }
+
 .section-hero .button:active {
     color: var(--primary-brand);
 }
 
-
-
-/* ----------- hover --------------- */
+/* ----------- hover-focus --------------- */
 
 /* ------------------- services ------------------- */
 
@@ -344,11 +358,7 @@ img {
     background-color: var(--light-color);
 }
 
-
-
-
 /* ---------- icons-group ---------- */
-
 
 .feature-list .subtitle {
     margin-top: 0;
@@ -375,10 +385,9 @@ img {
     text-align: left; 
     vertical-align: top; 
     border-radius: nullpx;
- }
+}
      
 /* ---------------- feature-section --------------- */
-
 
 
 
@@ -427,7 +436,6 @@ img {
 }
 
 /* ----------------- section-work ----------------- */
-
 
 
 
@@ -505,8 +513,6 @@ img {
 /* ----------------- section-team ------------------*/
 
 
-
-
 /* --------------- section-team-icon ---------------*/
 
 .team-soc-list {
@@ -532,19 +538,21 @@ img {
     border-radius: 50%;
     background-color: var(--primary-brand);
     background-position: center;
+    transition:  background-color var(--transition-duration-and-fun);
 }
 
 .team-soc-icon {
  fill: var(--light-color);
 }
-/* ----------- hover --------------- */
 
+/* ----------- hover-focus --------------- */
 
 .team-soc-link:hover,
 .team-soc-link:focus {
     background-color: var(--primary-hover);
 }
-/* ----------- hover --------------- */
+
+/* ----------- hover-focus --------------- */
 
 /* --------------- section-team-icon -------------- */
 
@@ -580,7 +588,6 @@ img {
     border-radius: 4px;
     width: 168px;
     height: 88px;
-    border: 1px solid #8E8F99;
     content: "";
 } 
 
@@ -598,17 +605,20 @@ img {
     height:100%;
     fill: var(--subtle-text-color);
     border-radius: 4px;
+    border: 1px solid var(--subtle-text-color);
+    transition:  fill var(--transition-duration-and-fun),
+    border var(--transition-duration-and-fun);;
 }
 
 .customers-icon {
     fill: var(--subtle-text-color);
+    transition: fill var(--transition-duration-and-fun);
 }
 
-/* ----------- hover --------------- */
+/* ----------- hover-focus --------------- */
 .custum-btn {
     transition: fill var(--transition-duration-and-fun),
     border var(--transition-duration-and-fun);
-
 } 
 
 .section-customers .link:hover,
@@ -618,12 +628,12 @@ img {
     border-radius: 4px;    
 }
 
-
 .section-customers .link:hover .customers-icon,
 .section-customers .link:focus .customers-icon {
     fill: var(--primary-hover);
 }
-/* ----------- hover --------------- */
+
+/* ----------- hover-focus --------------- */
 
 /* --------------- section-customers -------------- */
 
@@ -719,19 +729,113 @@ img {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     background-position: center; 
+    transition:  background-color var(--transition-duration-and-fun);
 }
 
-/* ----------- hover --------------- */ 
+/* ----------- hover-focus --------------- */
 
 .footer-soc-link:hover,
 .footer-soc-link:focus {
     background-color: var(--button-hover);
 }
-/* ----------- hover --------------- */
 
+/* ----------- hover-focus --------------- */
+
+.social-media + .booking {
+    margin-left: 80px;
+}
+
+.booking-form {
+    display: flex;
+    align-items: center;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 80px;
+    width: 453px;
+}
+
+.booking-div {
+    width: 264px;
+}
+
+.booking-div + .footer-form-div {
+    margin-left: 24px;
+}
+
+.booking-label {
+    margin-bottom:  16px;
+}
+
+.span-subscribe {
+    color: var(--primary-white-color);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+.booking-form-input {
+    margin: 0;
+    margin-top: 16px;
+    padding-left: 16px;
+    width: 100%;
+    height: 40px;
+    display: block;
+    background-color: var(--dark-text-color);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: hsla(0, 0%, 0%, 0.15);
+    color: var(--primary-white-color) 60%;
+    top: 8px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    transition: border var(--transition-duration-and-fun);
+}
+
+/* ----------- focus --------------- */ 
+.booking-form-input:focus {
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid var(--primary-brand);
+}
+/* ----------- focus --------------- */ 
+
+
+.footer-form-div {
+    position: relative;
+}
+
+.sub-button {
+    display: block;
+    width: 165px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 64px 8px 24px; 
+    background-color: var(--primary-brand);
+    color: var(--primary-white-color);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.footer-form-svg {
+    position: absolute;
+    left: 117px;;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--primary-white-color);
+}
 
 /* -------------------- footer -------------------- */
-
 
 
 
@@ -774,10 +878,7 @@ img {
     cursor: pointer;
 }
 
-
-
-/* ----------- hover --------------- */
-
+/* ----------- hover-focus --------------- */
 
 .btn-transit {
     transition: border var( --transition-duration-and-fun),
@@ -795,7 +896,7 @@ img {
     border-radius: 4px;
 }
 
-/* ----------- hover --------------- */
+/* ----------- hover-focus --------------- */
 .btn-1{
     color: var(--primary-white-color); 
     background-color: var(--primary-brand);
@@ -870,9 +971,7 @@ img {
     display: block;
 }
 
-
-/* ----------- hover --------------- */
-
+/* ----------- hover-focus --------------- */
 .project-transit {
     transition: box-shadow var(--transition-duration-and-fun);
 }
@@ -880,11 +979,11 @@ img {
 .project-card:hover,
 .project-card:focus{
     border-radius: 6px;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 1px 6px rgba(46, 47, 66, 0.08); 
+    box-shadow: 0px 5px 4px rgba(46, 47, 66, 0.08),
+     0px 4px 4px rgba(46, 47, 66, 0.16),
+    0px 4px 10px rgba(46, 47, 66, 0.08); 
 } 
-
-/* ----------- hover --------------- */
+/* ----------- hover-focus --------------- */
 
 
 /*---------- box-menu  -------------*/
@@ -928,8 +1027,7 @@ img {
 }
   
 .overlay > p {
-    margin: 0;
-   
+    margin: 0;  
 }
 
 /*---------- box-menu  -------------*/
@@ -963,8 +1061,11 @@ img {
 
 /* -------------------- Galerry ------------------- */
 
+
+
 /* --------------------- MODAL -------------------- */ 
 
+/* ----------------- MODAL WINDOW ----------------- */ 
 
 .backdrop {
     position: fixed;
@@ -992,6 +1093,7 @@ img {
 
 .modal{
     position: absolute;
+    padding: 72px 24px 24px 24px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -1001,7 +1103,7 @@ img {
     min-height: 576px;
     cursor: pointer;
     border-radius: 4px;
-    background-color: #FCFCFC;
+    background-color: var(--modal-color);
     box-shadow: 1px 0px, 2px rgba(0, 0, 0, 0.2), 3px 0px 1px rgba(0, 0, 0, 0.12),
     1px 0px 1px rgba(0, 0, 0, 0.12); 
 }
@@ -1019,8 +1121,197 @@ img {
     width: 24px;
     height: 24px;
     cursor: pointer;
+    transition: background-color var(--transition-duration-and-fun);
 }
+
 .modal-icon {
-    color: var(--icon-close-black);
+    fill: var(--icon-close-black);
+    transition: fill var(--transition-duration-and-fun);
 }
-/* --------------------- MODAL -------------------- */ 
+
+/* ----------- hover-focus --------------- */
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: var(--primary-brand);
+  
+}
+.modal-icon:hover,
+.modal-icon:focus {
+    fill: var(--primary-white-color);
+}
+/* ----------- hover-focus --------------- */
+
+/* ----------------- MODAL WINDOW ----------------- */ 
+
+
+
+/* ------------------ MODAL FORM ------------------ */ 
+
+.backdrop .text {
+    margin-bottom: 14px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.modal-form {
+    margin: 0;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-label {
+    margin-bottom: 4px;
+}
+
+.modal-form-input-desc {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    text-align: left;    
+    color: var(--subtle-text-color); 
+}
+
+.form-input {
+    display: block;
+    position: relative;
+}
+
+.modal-form-input {
+    margin: 0;
+    margin-top: 8px;
+    padding-left: 42px;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--subtle-text-color);
+    transition: border var(--transition-duration-and-fun);
+}
+
+.form-svg {
+    fill: var(--dark-text-color);
+    position: absolute;
+    top: 60%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: fill var(--transition-duration-and-fun);
+}
+
+/* ----------- focus --------------- */
+.modal-form-input:focus {
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid var(--primary-brand);
+}
+.modal-form-input:focus + .form-svg {
+    fill: var(--primary-brand);
+}
+/* ----------- focus --------------- */
+
+.comment-form {
+    margin: 0;
+    resize: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--subtle-text-color);
+    height: 120px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+/* ----------- checkbox --------------- */
+
+.modal-form-check {
+    border-radius: 2px;
+    display: block;
+    height: 16px;
+    width: 16px;
+    transition: var(--transition-duration-and-fun);
+}
+
+.label-text-policy {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color:  var(--label-text-policy);
+}
+
+.label-text-policy::before {
+    margin-right: 8px;
+    display: block;
+    content: '';
+    height: 16px;
+    width: 16px;
+    border-radius: 2px;
+    border: 1px solid var(--dark-text-color);
+}
+
+.label-link {
+    cursor: pointer;
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* ----------- before --------------- */
+.modal-form-check:checked + .label-text-policy::before{
+    background-color: var(--primary-hover);
+    background-image: url("../images/click-check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* ----------- before --------------- */
+
+
+/* ----------- checkbox --------------- */
+.button-backdrop {
+    align-self: center;
+    display: block;
+    background-color: var(--primary-brand);
+    color: var( --primary-white-color);
+    font-family: var(--first-font-family);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    background-color: var(--primary-brand);
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    cursor: pointer;
+    text-decoration: none;
+    vertical-align: center;
+    transition: opacity var( --transition-duration-and-fun),
+    background-color var( --transition-duration-and-fun); 
+}
+/* ----------- hover-focus --------------- */
+.button-backdrop:hover,
+.button-backdrop:focus{
+   background-color: var(--primary-hover);
+   opacity: 10;
+}
+
+.button-backdrop:active {
+    color: var(--primary-brand);
+}
+/* ----------- hover-focus --------------- */
+
+/* ------------------ MODAL FORM ------------------ */ 
+/* --------------------- MODAL -------------------- */
