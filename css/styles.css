@@ -758,10 +758,6 @@ img {
     width: 264px;
 }
 
-.booking-div + .footer-form-div {
-    margin-left: 24px;
-}
-
 .booking-label {
     margin-bottom:  16px;
 }
@@ -786,8 +782,10 @@ img {
     background-color: var(--dark-text-color);
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: hsla(0, 0%, 0%, 0.15);
-    color: var(--primary-white-color) 60%;
+    transition: border var(--transition-duration-and-fun);
+}
+
+.booking-form-input::placeholder {
     top: 8px;
     font-family: Roboto;
     font-size: 12px;
@@ -795,8 +793,9 @@ img {
     line-height: 24px;
     letter-spacing: 0.04em;
     text-align: left;
-    transition: border var(--transition-duration-and-fun);
+    color: var(--primary-white-color);
 }
+
 
 /* ----------- focus --------------- */ 
 .booking-form-input:focus {
@@ -806,18 +805,18 @@ img {
 }
 /* ----------- focus --------------- */ 
 
-
-.footer-form-div {
-    position: relative;
-}
-
 .sub-button {
-    display: block;
+    display: flex;
+    justify-content: space-around;
     width: 165px;
     border: none;
     border-radius: 4px;
-    padding: 8px 64px 8px 24px; 
+    padding: 8px 16px 8px 24px; 
     background-color: var(--primary-brand);
+    cursor: pointer;
+}
+
+.sub-span {
     color: var(--primary-white-color);
     font-family: Roboto;
     font-size: 16px;
@@ -828,10 +827,6 @@ img {
 }
 
 .footer-form-svg {
-    position: absolute;
-    left: 117px;;
-    top: 50%;
-    transform: translateY(-50%);
     fill: var(--primary-white-color);
 }
 
@@ -1148,8 +1143,8 @@ img {
 /* ------------------ MODAL FORM ------------------ */ 
 
 .backdrop .text {
-    margin-bottom: 14px;
-    font-family: Roboto;
+    margin-bottom: 6px;
+    font-family: var(--first-font-family);
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -1165,17 +1160,18 @@ img {
 }
 
 .modal-form-label {
+    margin-top: 8px;
     margin-bottom: 4px;
 }
 
 .modal-form-input-desc {
-    font-family: Roboto;
+    font-family: var(--first-font-family);
+    color: var(--subtle-text-color); 
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.01em;
     text-align: left;    
-    color: var(--subtle-text-color); 
 }
 
 .form-input {
@@ -1185,7 +1181,6 @@ img {
 
 .modal-form-input {
     margin: 0;
-    margin-top: 8px;
     padding-left: 42px;
     width: 100%;
     height: 40px;
@@ -1197,7 +1192,7 @@ img {
 .form-svg {
     fill: var(--dark-text-color);
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 16px;
     transform: translateY(-50%);
     transition: fill var(--transition-duration-and-fun);
@@ -1221,7 +1216,7 @@ img {
     border-radius: 4px;
     border: 1px solid var(--subtle-text-color);
     height: 120px;
-    font-family: Roboto;
+    font-family: var(--first-font-family);
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
@@ -1230,37 +1225,36 @@ img {
 }
 
 /* ----------- checkbox --------------- */
+.label-check-policy{
+    margin-top: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
 
 .modal-form-check {
-    border-radius: 2px;
+    --webkit-appearance: none;
+    appearance: none;
     display: block;
     height: 16px;
     width: 16px;
+    content: '';
+    border: 1px solid var(--dark-text-color);
+    border-radius: 2px;
     transition: var(--transition-duration-and-fun);
 }
 
-.label-text-policy {
-    display: flex;
-    align-items: center;
-    margin-top: 16px;
-    margin-bottom: 24px;
-    font-family: Roboto;
+.span-check-policy {
+    user-select: none;
+    font-family: var(--first-font-family);
+    color:  var(--label-text-policy);
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0.04em;
     text-align: left;
-    color:  var(--label-text-policy);
-}
-
-.label-text-policy::before {
-    margin-right: 8px;
-    display: block;
-    content: '';
-    height: 16px;
-    width: 16px;
-    border-radius: 2px;
-    border: 1px solid var(--dark-text-color);
 }
 
 .label-link {
@@ -1270,8 +1264,9 @@ img {
 }
 
 /* ----------- before --------------- */
-.modal-form-check:checked + .label-text-policy::before{
+.modal-form-check:checked {
     background-color: var(--primary-hover);
+    border: 1px solid var(--primary-hover);
     background-image: url("../images/click-check.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -1281,8 +1276,10 @@ img {
 
 /* ----------- checkbox --------------- */
 .button-backdrop {
-    align-self: center;
     display: block;
+    align-self: center;
+    width: 170px;
+    padding: 16px 32px;
     background-color: var(--primary-brand);
     color: var( --primary-white-color);
     font-family: var(--first-font-family);
@@ -1294,12 +1291,10 @@ img {
     background-color: var(--primary-brand);
     border: none;
     border-radius: 4px;
-    padding: 16px 32px;
     cursor: pointer;
     text-decoration: none;
-    vertical-align: center;
     transition: opacity var( --transition-duration-and-fun),
-    background-color var( --transition-duration-and-fun); 
+    background-color var( --transition-duration-and-fun);  
 }
 /* ----------- hover-focus --------------- */
 .button-backdrop:hover,
@@ -1308,10 +1303,7 @@ img {
    opacity: 10;
 }
 
-.button-backdrop:active {
-    color: var(--primary-brand);
-}
 /* ----------- hover-focus --------------- */
 
 /* ------------------ MODAL FORM ------------------ */ 
-/* --------------------- MODAL -------------------- */
+/* --------------------- MODAL -------------------- */ 
