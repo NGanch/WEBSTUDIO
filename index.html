@@ -17,7 +17,9 @@
           
        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/csscdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"> -->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"/>
+
        <link  rel="stylesheet" href="./css/styles.css"/>
+       <!-- <link  rel="stylesheet" href="./css/mobile-menu.css"/> -->
    
 
 <title>Module 1.1</title>
@@ -31,7 +33,7 @@
      <header class = "page-header">
             
     <!-- Навигація на інші сторінки -->
-        <div class="container flex-container">
+        <div class="page-header-container container flex-container">
 
             <nav class = "header-nav">
                 <a href="./index.html" class = "logo"><span class = "logo-icon">WEB</span>STUDIO</a>
@@ -49,6 +51,8 @@
                 </ul>
 
             </nav>
+
+          
     <!-- Навигація на інші сторінки -->
             <ul class = "auth-list">
                 <!-- Посилання на телефонний номер -->              
@@ -57,8 +61,15 @@
               <!-- Посилання на адресу електронної пошти  -->
                 <li class = "auth-item"><a href="mailto:example@mail.ua" class = "header-contacts  header-btn">info@devstudio.com</a></li>
              </ul>
+             <button type="button" class="mobile-menu-open js-open-menu" aria-expanded="false"
+             aria-controls="mobile-menu">
+                 <svg class="mobile-menu-open-icon" width="32px" height="22px">
+                     <use href="./images/hamburger-icon.svg"></use>
+                 </svg>
+             </button>
         </div>
-  
+
+
      </header>
 <!--------------- Шапка сторінки ------------------>
 
@@ -137,13 +148,28 @@
                 <h2 class = "title">What are we doing</h2>
                 <ul class = "list">
                     <li class = "item">
-                        <img class = "picture" src = "./images/photo-1.jpg" alt = "Computer screen with content" width = "360"/>
+                      
+                        <img class = "picture" 
+                        srcset="./images/work/image-1_desk.jpg 1x, ./images/work/image-1_desk@2x.jpg 2x"
+                        src = "./images/work/image-1_desk.jpg" 
+                        alt = "Computer screen with content"
+                         width = "360"/>
                     </li>
                     <li class = "item">
-                         <img class = "picture" src = "./images/photo-2.jpg" alt = "Phone program" width = "360"/>
+                        <img class = "picture" 
+                        srcset="./images/work/image-2_desk.jpg 1x, ./images/work/image-2_desk@2x.jpg 2x"
+                        src = "./images/work/image-2_desk.jpg" 
+                        alt = "Phone program"
+                         width = "360"/>
+
                     </li>
                     <li class = "item">
-                        <img class = "picture" src = "./images/photo-3.jpg" alt = "Phone screen with content"  width = "360"/>
+                        <img class = "picture" 
+                        srcset="./images/work/image-3_desk.jpg 1x, ./images/work/image-2_desk@2x.jpg 2x"
+                        src = "./images/work/image-3_desk.jpg" 
+                        alt = "Phone screen with content" 
+                         width = "360"/>
+
                     </li>
                  </ul>
             </div>
@@ -156,7 +182,12 @@
                 <h2 class = "title">Our Team</h2>
                 <ul class = "list">
                     <li class = "item">
-                        <img class = "image" src = "./images/img.jpg" alt = "A photo of a man" width = "264"/>
+                        <img class = "image" 
+                        srcset="./images/team/photo-1_desk.jpg 1x, ./images/team/photo-1_desk@2x.jpg 2x"
+                        src = "./images/team/photo-1_desk.jpg" 
+                        alt = "Photo card of a man"
+                         width = "264"/>
+                     
                         <h3 class = "subtitle">Mark Guerrero</h3>
                         <p class = "text">Product Designer</p>
                     <!-- team-soc-list -->
@@ -193,7 +224,11 @@
                      <!-- team-soc-list -->
                 </li>
                  <li class = "item">
-                    <img class = "image" src = "./images/img-1.jpg" alt = "A photo of a man" width = "264"/>
+                    <img class = "image" 
+                    srcset="./images/team/photo-2_desk.jpg 1x, ./images/team/photo-2_desk@2x.jpg 2x"
+                    src = "./images/team/photo-2_desk.jpg" 
+                    alt = "Photo card of a man"
+                     width = "264"/>
                     <h3 class = "subtitle">Tom Ford</h3>
                     <p class = "text">Frontend Developer</p>
                 <!-- team-soc-list -->
@@ -230,7 +265,11 @@
                 <!-- team-soc-list -->
                 </li>
                 <li class = "item">
-                    <img class = "image" src = "./images/img-2.jpg" alt = "Photo card of a woman" width = "264"/>
+                    <img class = "image" 
+                    srcset="./images/team/photo-3_desk.jpg 1x, ./images/team/photo-3_desk@2x.jpg 2x"
+                    src = "./images/team/photo-3_desk.jpg" 
+                    alt = "Photo card of a woman"
+                     width = "264"/>
                     <h3 class = "subtitle">Camila Garcia</h3>
                     <p class = "text">Marketing</p>
                 <!-- team-soc-list -->
@@ -267,7 +306,11 @@
                 <!-- team-soc-list -->
                 </li>
                 <li class = "item">  
-                    <img class = "image" src = "./images/img-3.jpg" alt = "A photo of a man" width = "264"/>
+                    <img class = "image" 
+                    srcset="./images/team/photo-4_desk.jpg 1x, ./images/team/photo-4_desk@2x.jpg 2x"
+                    src = "./images/team/photo-4_desk.jpg" 
+                    alt = "Photo card of a man"
+                     width = "264"/>
                     <h3 class = "subtitle">Daniel Wilson</h3>
                     <p class = "text">UI Designer</p>
                 <!-- team-soc-list -->
@@ -315,42 +358,42 @@
                 <li class = "item">
                     <a href="#" class="link custum-btn">
                         <svg class = "customers-icon"  width= "41px" height = "46px" >
-                            <use href="./images/symbol-defs.svg#icon-group" class = "use-svg"></use>
+                            <use href="./images/symbol-defs.svg#icon-decstop-group-1" class = "use-svg"></use>
                         </svg>
                     </a>    
                  </li>
                 <li class = "item">
                     <a href="#" class="link custum-btn">
                         <svg class = "customers-icon" width="40px" height= "52px">
-                            <use href="./images/symbol-defs.svg#icon-group-1" class = "use-svg"></use>
+                            <use href="./images/symbol-defs.svg#icon-decstop-group-2" class = "use-svg"></use>
                         </svg>
                     </a>
                 </li>
                 <li class = "item">
                     <a href="#" class="link custum-btn">
                         <svg class = "customers-icon" width= "44px" height= "41px" >
-                            <use href="./images/symbol-defs.svg#icon-group-2" class = "use-svg"></use>
+                            <use href="./images/symbol-defs.svg#icon-decstop-group-3" class = "use-svg"></use>
                         </svg>
                     </a>
                 </li>
                 <li class = "item">
                     <a href="#" class="link custum-btn">
                         <svg class = "customers-icon"  width= "84px" height= "41px">
-                            <use href="./images/symbol-defs.svg#icon-group-3" class = "use-svg"></use>
+                            <use href="./images/symbol-defs.svg#icon-decstop-group-4" class = "use-svg"></use>
                         </svg>
                     </a>
                 </li>
                 <li class = "item">
                     <a href="#" class="link custum-btn">
                         <svg class = "customers-icon" width= "63px" height= "45px" >
-                            <use href="./images/symbol-defs.svg#icon-group-4" class = "use-svg"></use>
+                            <use href="./images/symbol-defs.svg#icon-decstop-group-5" class = "use-svg"></use>
                         </svg>
                     </a>
                 </li>
                 <li class = "item">
                     <a href="#" class="link custum-btn">
                         <svg class = "customers-icon" width= "94px" height= "44px">
-                            <use href="./images/symbol-defs.svg#icon-group-5" class = "use-svg"></use>
+                            <use href="./images/symbol-defs.svg#icon-decstop-group-6" class = "use-svg"></use>
                         </svg>
                     </a>
                 </li>
@@ -364,7 +407,7 @@
    
 <!-------------------- Футер ----------------------->
     <footer class = "footer">
-        <div class="container flex-container">
+        <div class="container footer-container">
             <div class="social social-info">
             
                 <a href="./index.html" class="logo"><span class = "logo-icon">WEB</span>STUDIO</a>
@@ -372,7 +415,7 @@
             </div>
 
 
-        <div class="social social-media">
+            <div class="social social-media">
             <h3 class="title">Social media</h3>
             <ul class ="footer-soc-list">
                 <li class = "footer-soc-item">
@@ -405,9 +448,9 @@
                 </li>
             </ul>
 
-        </div>
+            </div>
 
-        <div class="booking">
+            <div class="social-booking">
             
             <form class="booking-form" name="booking-form" autocomplete="off" role="search">
                 <div class="booking-div">
@@ -435,7 +478,7 @@
         
                 
             </form>
-        </div>
+            </div>
 
         </div>
     </footer>
@@ -549,6 +592,71 @@
 
 <!-------------- MODAL ------------------>
 
+<!-- Навигація на мобільне вікно сторінки -->
+<div class="mobile-menu-container container js-menu-container" id="mobile-menu">
+
+    <button type="button" class ="mobile-menu-close js-close-menu">
+
+        <svg class="mobile-close-icon active-icon" width="8px" height="8px">
+             <use href="./images/symbol-defs.svg#icon-close-black"></use>
+        </svg>
+        </button>
+   
+    <ul class = "mobile-menu list">
+        <li class = "mobile-menu-item">
+           <a href="./index.html" class = "mobile-menu-link current header-mobile-btn">Studio</a>
+       </li>
+        <li class = "mobile-menu-item">
+           <a href="./portfolio.html" class = "mobile-menu-link   header-mobile-btn">Portfolio</a>
+       </li>
+       <li class = "mobile-menu-item">
+           <a href="./index.html" class = "mobile-menu-link  header-mobile-btn">Contacts</a>
+       </li>
+   </ul>
+
+   <ul class = "mobile-contacts-list">
+    <!-- Посилання на телефонний номер -->              
+     <li class = "mobile-contacts-item"><a href="tel:+11(000)1111111" class = "mobile-contacts-link accent header-mobile-btn">+11 (000) 111-11-11</a></li>
+  
+  <!-- Посилання на адресу електронної пошти  -->
+    <li class = "mobile-contacts-item"><a href="mailto:example@mail.ua" class = "mobile-contacts-link  mobile-contacts-link-email header-mobile-btn">info@devstudio.com</a></li>
+ </ul>
+ <!-- mobile-modal-soc-list -->
+ <ul class ="mobile-modal-soc-list">
+    <li class = "mobile-modal-soc-item">
+       <a class="mobile-modal-soc-link btn">
+           <svg class = "mobile-modal-soc-icon" width="16px" height="16px">
+               <use href="./images/mobile-icons.svg#icon-instagram-modal-mobile"></use>
+           </svg>
+       </a>
+   </li>
+   <li class = "mobile-modal-soc-item">
+       <a class="mobile-modal-soc-link btn">
+           <svg class = "mobile-modal-soc-icon" width="16px" height="16px">
+               <use href="./images/mobile-icons.svg#icon-twitter-modal-mobile"></use>
+           </svg>
+       </a>
+   </li>
+   <li class = "mobile-modal-soc-item">
+       <a class="mobile-modal-soc-link btn">
+           <svg class = "mobile-modal-soc-icon" width="16px" height="16px">
+               <use href="./images/mobile-icons.svg#icon-facebook-modal-mobile"></use>
+           </svg>
+       </a>
+   </li>
+   <li class = "mobile-modal-soc-item">
+       <a class="mobile-modal-soc-link btn">
+           <svg class= "mobile-modal-soc-icon" width="16px" height="16px">
+               <use href="./images/mobile-icons.svg#icon-linkedin-modal-mobile"></use>
+           </svg>
+       </a>
+   </li>
+</ul>
+
+  </div>
+
+<!-- Навигація на мобільне вікно сторінки -->
+
 <!-- Do not let form send without JS -->
 <script>
     (() => {
@@ -563,7 +671,16 @@
     })();
 </script>
 <!-- Do not let form send without JS -->
+<!-- При відкриті модального вікна блокує скрол -->
+<script
+defer
+src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+crossorigin="anonymous"
+></script>
+<!-- При відкриті модального вікна блокує скрол -->
 
+<script src="./js/mobile-menu.js"></script>
 <script src="./js/modal.js"></script>
 
 </body>
